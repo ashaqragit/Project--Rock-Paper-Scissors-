@@ -16,25 +16,21 @@ function generateComputerChoice() {
   } else {
     computerChoice = "scissors";
   }
-  console.log("computer choice is " + computerChoice);
 }
 function setPlayerRock() {
   playerChoice = "rock";
-  console.log("player choice is Rock");
   generateComputerChoice();
   playGame();
   whoWins();
 }
 function setPlayerPaper() {
   playerChoice = "paper";
-  console.log("player choice is paper");
   generateComputerChoice();
   playGame();
   whoWins();
 }
 function setPlayerScissors() {
   playerChoice = "scissors";
-  console.log("player choice is scissors");
   generateComputerChoice();
   playGame();
   whoWins();
@@ -70,12 +66,16 @@ function whoWins() {
     );
   }
 }
-function updateScores() {
+function logScores() {
   console.log("computer score = " + computerScore);
   console.log("player score = " + playerScore);
 }
 
 function playGame() {
+  currentRound++;
+  console.log(
+    "================== Round " + currentRound + " =================="
+  );
   if (playerChoice === "rock") {
     if (computerChoice === "rock") {
       tieScore++;
@@ -128,9 +128,7 @@ function playGame() {
       );
     }
   }
-  updateScores();
-  currentRound++;
-  console.log("current Round " + currentRound);
+  logScores();
 }
 
 function test() {
