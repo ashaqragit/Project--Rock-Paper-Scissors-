@@ -3,7 +3,7 @@ let computerChoice = "";
 let playerScore = 0;
 let computerScore = 0;
 let tieScore = 0;
-let maximumrounds = 5;
+let maximumRounds = 5;
 let currentRound = 0;
 
 function generateComputerChoice() {
@@ -37,7 +37,7 @@ function setPlayerScissors() {
 }
 
 function whoWins() {
-  if (currentRound === 5 && playerScore != computerScore) {
+  if (currentRound === maximumRounds && playerScore != computerScore) {
     if (playerScore > computerScore) {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
@@ -47,7 +47,7 @@ function whoWins() {
       console.log("player score = " + playerScore);
       console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
     }
-  } else if (currentRound < 5 && playerScore != computerScore) {
+  } else if (currentRound < maximumRounds && playerScore != computerScore) {
     if (playerScore > computerScore && playerScore - computerScore === 3) {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
@@ -60,9 +60,9 @@ function whoWins() {
       console.log("player score = " + playerScore);
       console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
     }
-  } else if (currentRound === 5 && playerScore === computerScore) {
+  } else if (currentRound === maximumRounds && playerScore === computerScore) {
     console.log(
-      "========================game ends its a tie=========================="
+      "=================== game ends its a tie ======================="
     );
   }
 }
