@@ -41,7 +41,7 @@ function setPlayerScissors() {
 }
 
 function whoWins() {
-  if (currentRound === 5) {
+  if (currentRound === 5 && playerScore != computerScore) {
     if (playerScore > computerScore) {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
@@ -51,19 +51,23 @@ function whoWins() {
       console.log("player score = " + playerScore);
       console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
     }
-  } else {
-    if (playerScore > computerScore && playerScore - computerScore === 2) {
+  } else if (currentRound < 5 && playerScore != computerScore) {
+    if (playerScore > computerScore && playerScore - computerScore === 3) {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
       console.log("player winnnnnnnnnnnnnnnnnnnnnnn");
     } else if (
       playerScore < computerScore &&
-      computerScore - playerScore === 2
+      computerScore - playerScore === 3
     ) {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
       console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
     }
+  } else if (currentRound === 5 && playerScore === computerScore) {
+    console.log(
+      "========================game ends its a tie=========================="
+    );
   }
 }
 function updateScores() {
@@ -127,4 +131,9 @@ function playGame() {
   updateScores();
   currentRound++;
   console.log("current Round " + currentRound);
+}
+
+function test() {
+  playerChoice = "rock";
+  computerChoice = "rock";
 }
