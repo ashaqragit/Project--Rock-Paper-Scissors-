@@ -19,32 +19,32 @@ function generateComputerChoice() {
   randNumber = Math.floor(Math.random() * (4 - 1)) + 1;
   if (randNumber === 1) {
     computerChoice = "rock";
-    computerChoiceImg.style.backgroundImage = 'url("/img/rock.png")';
+    computerChoiceImg.style.backgroundImage = 'url("img/rock.png")';
   } else if (randNumber === 2) {
     computerChoice = "paper";
-    computerChoiceImg.style.backgroundImage = 'url("/img/paper.png")';
+    computerChoiceImg.style.backgroundImage = 'url("img/paper.png")';
   } else {
     computerChoice = "scissors";
-    computerChoiceImg.style.backgroundImage = 'url("/img/scissors.png")';
+    computerChoiceImg.style.backgroundImage = 'url("img/scissors.png")';
   }
 }
 function setPlayerRock() {
   playerChoice = "rock";
-  playerChoiceImg.style.backgroundImage = 'url("/img/rock.png")';
+  playerChoiceImg.style.backgroundImage = 'url("img/rock.png")';
   generateComputerChoice();
   playGame();
   whoWins();
 }
 function setPlayerPaper() {
   playerChoice = "paper";
-  playerChoiceImg.style.backgroundImage = 'url("/img/paper.png")';
+  playerChoiceImg.style.backgroundImage = 'url("img/paper.png")';
   generateComputerChoice();
   playGame();
   whoWins();
 }
 function setPlayerScissors() {
   playerChoice = "scissors";
-  playerChoiceImg.style.backgroundImage = 'url("/img/scissors.png")';
+  playerChoiceImg.style.backgroundImage = 'url("img/scissors.png")';
   generateComputerChoice();
   playGame();
   whoWins();

@@ -45,13 +45,13 @@ body {
   filter: drop-shadow(3px 5px 2px #03030452);
 }
 .paper {
-  background-image: url("/img/paper.png");
+  background-image: url("img/paper.png");
   background-size: cover;
   margin-right: 0.25rem;
   filter: drop-shadow(3px 5px 2px #03030454);
 }
 .scissors {
-  background-image: url("/img/scissors.png");
+  background-image: url("img/scissors.png");
   background-size: cover;
   margin-left: 0.25rem;
   filter: drop-shadow(3px 5px 2px #0303045d);
@@ -129,10 +129,10 @@ body {
   justify-content: space-between;
 }
 .player-choice {
-  background-image: url("/img/null-hand.png");
+  background-image: url("img/null-hand.png");
   background-size: cover;
 }
 .computer-choice {
-  background-image: url("/img/null-hand.png");
+  background-image: url("img/null-hand.png");
   background-size: cover;
 }
