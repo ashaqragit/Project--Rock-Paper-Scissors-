@@ -42,19 +42,19 @@ body {
 .rock {
   background-image: url("/img/rock.png");
   background-size: cover;
-  filter: drop-shadow(3px 5px 2px #0303049c);
+  filter: drop-shadow(3px 5px 2px #03030452);
 }
 .paper {
   background-image: url("/img/paper.png");
   background-size: cover;
   margin-right: 0.25rem;
-  filter: drop-shadow(3px 5px 2px #0303049c);
+  filter: drop-shadow(3px 5px 2px #03030454);
 }
 .scissors {
   background-image: url("/img/scissors.png");
   background-size: cover;
   margin-left: 0.25rem;
-  filter: drop-shadow(3px 5px 2px #0303049c);
+  filter: drop-shadow(3px 5px 2px #0303045d);
 }
 .log {
   background-color: rgb(254, 252, 249);

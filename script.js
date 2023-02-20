@@ -9,32 +9,42 @@ let currentRound = 0;
 const logMessage = document.querySelector(".log-message");
 const whoWin = document.querySelector(".who-win");
 const round = document.querySelector(".round");
+const computerChoiceImg = document.querySelector(".computer-choice");
+const playerChoiceImg = document.querySelector(".player-choice");
+const playerScoreLog = document.querySelector(".player-score");
+const computerScoreLog = document.querySelector(".computer-score");
 
 function generateComputerChoice() {
   let randNumber;
   randNumber = Math.floor(Math.random() * (4 - 1)) + 1;
   if (randNumber === 1) {
     computerChoice = "rock";
+    computerChoiceImg.style.backgroundImage = 'url("/img/rock.png")';
   } else if (randNumber === 2) {
     computerChoice = "paper";
+    computerChoiceImg.style.backgroundImage = 'url("/img/paper.png")';
   } else {
     computerChoice = "scissors";
+    computerChoiceImg.style.backgroundImage = 'url("/img/scissors.png")';
   }
 }
 function setPlayerRock() {
   playerChoice = "rock";
+  playerChoiceImg.style.backgroundImage = 'url("/img/rock.png")';
   generateComputerChoice();
   playGame();
   whoWins();
 }
 function setPlayerPaper() {
   playerChoice = "paper";
+  playerChoiceImg.style.backgroundImage = 'url("/img/paper.png")';
   generateComputerChoice();
   playGame();
   whoWins();
 }
 function setPlayerScissors() {
   playerChoice = "scissors";
+  playerChoiceImg.style.backgroundImage = 'url("/img/scissors.png")';
   generateComputerChoice();
   playGame();
   whoWins();
@@ -46,16 +56,19 @@ function whoWins() {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
       console.log("player winnnnnnnnnnnnnnnnnnnnnnn");
+      whoWin.textContent = "Player win the game!!!";
     } else if (playerScore < computerScore) {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
       console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
+      whoWin.textContent = "Computer win the game!!!";
     }
   } else if (currentRound < maximumRounds && playerScore != computerScore) {
     if (playerScore > computerScore && playerScore - computerScore === 3) {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
       console.log("player winnnnnnnnnnnnnnnnnnnnnnn");
+      whoWin.textContent = "Player win the game!!!";
     } else if (
       playerScore < computerScore &&
       computerScore - playerScore === 3
@@ -63,14 +76,18 @@ function whoWins() {
       console.log("computer score = " + computerScore);
       console.log("player score = " + playerScore);
       console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
+      whoWin.textContent = "Computer win the game!!!";
     }
   } else if (currentRound === maximumRounds && playerScore === computerScore) {
     console.log(
       "=================== game ends its a tie ======================="
     );
+    whoWin.textContent = "game ends with a tie";
   }
 }
 function logScores() {
+  computerScoreLog.textContent = computerScore;
+  playerScoreLog.textContent = playerScore;
   console.log("computer score = " + computerScore);
   console.log("player score = " + playerScore);
 }
