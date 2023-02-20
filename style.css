@@ -16,7 +16,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 350px;
-  height: 500px;
+  height: 570px;
   border-radius: 2rem;
 }
 .player-choice-btn {
@@ -76,18 +76,61 @@ body {
 }
 .which-round {
   margin-top: 1rem;
-  background-color: rgb(254, 252, 249);
   width: 10rem;
   height: 2rem;
-  border-radius: 1rem;
   text-align: center;
-  font-weight: 400;
-  filter: drop-shadow(3px 5px 2px #03030433);
   color: rgb(77, 76, 76);
-  opacity: 0.7;
 }
-.round {
+
+.scores {
+  display: flex;
+  justify-content: center;
+  width: 20rem;
+  height: 10rem;
   font-family: "Karla", sans-serif;
-  margin-top: 0.3rem;
-  font-weight: 400;
+}
+.player-score-container,
+.computer-score-container {
+  text-align: center;
+  margin-top: 1rem;
+  width: 9rem;
+  height: 2rem;
+  color: rgb(77, 76, 76);
+}
+.player-score,
+.computer-score {
+  font-size: 5rem;
+  color: rgb(77, 76, 76);
+}
+.rounds-and-scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  width: 20rem;
+  height: 16rem;
+  background-color: rgb(254, 252, 249);
+  opacity: 0.7;
+  border-radius: 1rem;
+  filter: drop-shadow(3px 5px 2px #03030433);
+  font-family: "Karla", sans-serif;
+}
+.choice-img {
+  background-color: rgb(90, 153, 207);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.choice-img-main {
+  display: flex;
+  width: 12rem;
+  justify-content: space-between;
+}
+.player-choice {
+  background-image: url("/img/null-hand.png");
+  background-size: cover;
+}
+.computer-choice {
+  background-image: url("/img/null-hand.png");
+  background-size: cover;
 }
