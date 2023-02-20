@@ -40,7 +40,7 @@ body {
 .buttons-botom {
 }
 .rock {
-  background-image: url("/img/rock.png");
+  background-image: url("img/rock.png");
   background-size: cover;
   filter: drop-shadow(3px 5px 2px #03030452);
 }
