@@ -13,6 +13,9 @@ const computerChoiceImg = document.querySelector(".computer-choice");
 const playerChoiceImg = document.querySelector(".player-choice");
 const playerScoreLog = document.querySelector(".player-score");
 const computerScoreLog = document.querySelector(".computer-score");
+const playerButtons = document.querySelector(".player-choice-btn");
+const gameLog = document.querySelector(".log");
+const retryGame = document.querySelector(".retry-game");
 
 function generateComputerChoice() {
   let randNumber;
@@ -183,3 +186,12 @@ function test() {
   playerChoice = "rock";
   computerChoice = "rock";
 }
+
+function showButtonsAndLog() {
+  console.log("show buttons and log");
+  /*element.classList.add("mystyle")*/
+  retryGame.style.display = "none";
+  gameLog.style.display = "block";
+  playerButtons.style.display = "block";
+}
+function showGameOverContainer() {}
