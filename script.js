@@ -19,16 +19,7 @@ const retryGame = document.querySelector(".retry-game");
 const retryMsg = document.querySelector(".retry-message");
 
 /*=================================================================================*/
-function test() {
-  playerChoice = "rock";
-  computerChoice = "rock";
-}
 
-function showButtonsAndLog() {
-  retryGame.style.display = "none";
-  gameLog.style.display = "block";
-  playerButtons.style.display = "flex";
-}
 function showGameOverContainer() {
   retryGame.style.display = "flex";
   gameLog.style.display = "none";
