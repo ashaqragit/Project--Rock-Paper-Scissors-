@@ -18,14 +18,12 @@ const gameLog = document.querySelector(".log");
 const retryGame = document.querySelector(".retry-game");
 const retryMsg = document.querySelector(".retry-message");
 
-/*=================================================================================*/
-
 function showGameOverContainer() {
   retryGame.style.display = "flex";
   gameLog.style.display = "none";
   playerButtons.style.display = "none";
 }
-/*=================================================================================*/
+
 function refreshPage() {
   window.location.reload();
 }
@@ -68,39 +66,24 @@ function setPlayerScissors() {
 function whoWins() {
   if (currentRound === maximumRounds && playerScore != computerScore) {
     if (playerScore > computerScore) {
-      console.log("computer score = " + computerScore);
-      console.log("player score = " + playerScore);
-      console.log("player winnnnnnnnnnnnnnnnnnnnnnn");
       showGameOverContainer();
       retryMsg.textContent = "Player win the game!!!";
     } else if (playerScore < computerScore) {
-      console.log("computer score = " + computerScore);
-      console.log("player score = " + playerScore);
-      console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
       showGameOverContainer();
       retryMsg.textContent = "Computer win the game!!!";
     }
   } else if (currentRound < maximumRounds && playerScore != computerScore) {
     if (playerScore > computerScore && playerScore - computerScore === 3) {
-      console.log("computer score = " + computerScore);
-      console.log("player score = " + playerScore);
-      console.log("player winnnnnnnnnnnnnnnnnnnnnnn");
       showGameOverContainer();
       retryMsg.textContent = "Player win the game!!!";
     } else if (
       playerScore < computerScore &&
       computerScore - playerScore === 3
     ) {
-      console.log("computer score = " + computerScore);
-      console.log("player score = " + playerScore);
-      console.log("computer winnnnnnnnnnnnnnnnnnnnnnn");
       showGameOverContainer();
       retryMsg.textContent = "Computer win the game!!!";
     }
   } else if (currentRound === maximumRounds && playerScore === computerScore) {
-    console.log(
-      "=================== game ends its a tie ======================="
-    );
     showGameOverContainer();
     retryMsg.textContent = "Game ends its a tie!!!";
   }
@@ -108,8 +91,6 @@ function whoWins() {
 function logScores() {
   computerScoreLog.textContent = computerScore;
   playerScoreLog.textContent = playerScore;
-  console.log("computer score = " + computerScore);
-  console.log("player score = " + playerScore);
 }
 function updateLogMessage() {
   logMessage.textContent = `Player choice is ${playerChoice} Computer choice is ${computerChoice} `;
@@ -132,67 +113,47 @@ function playGame() {
   currentRound++;
   updateRoundMessage();
   updateLogMessage();
-  console.log(
-    "================== Round " + currentRound + " =================="
-  );
+
   if (playerChoice === "rock") {
     if (computerChoice === "rock") {
       tieScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} it is a tie  `
-      );
+
       whoWin.textContent = "It is a tie";
     } else if (computerChoice === "paper") {
       computerScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} Computer wins!!!  `
-      );
+
       whoWin.textContent = "Computer wins!!!";
     } else if (computerChoice === "scissors") {
       playerScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} Player wins!!!  `
-      );
+
       whoWin.textContent = "Player wins!!!";
     }
   } else if (playerChoice === "paper") {
     if (computerChoice === "paper") {
       tieScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} it is a tie  `
-      );
+
       whoWin.textContent = "It is a tie";
     } else if (computerChoice === "scissors") {
       computerScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} Computer wins!!!  `
-      );
+
       whoWin.textContent = "Computer wins!!!";
     } else if (computerChoice === "rock") {
       playerScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} Player wins!!!  `
-      );
+
       whoWin.textContent = "Player wins!!!";
     }
   } else {
     if (computerChoice === "scissors") {
       tieScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} it is a tie  `
-      );
+
       whoWin.textContent = "It is a tie";
     } else if (computerChoice === "rock") {
       computerScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} Computer wins!!!  `
-      );
+
       whoWin.textContent = "Computer wins!!!";
     } else if (computerChoice === "paper") {
       playerScore++;
-      console.log(
-        `Player choice is ${playerChoice} Computer choice is ${computerChoice} Player wins!!!  `
-      );
+
       whoWin.textContent = "Player wins!!!";
     }
   }
