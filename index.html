@@ -9,21 +9,23 @@
   </head>
   <body>
     <div class="game-container">
-      <div class="buttons-top">
-        <button
-          class="player-choice-btn rock"
-          onclick="setPlayerRock()"
-        ></button>
-      </div>
-      <div class="buttons-botom">
-        <button
-          class="player-choice-btn paper"
-          onclick="setPlayerPaper()"
-        ></button>
-        <button
-          class="player-choice-btn scissors"
-          onclick="setPlayerScissors()"
-        ></button>
+      <div class="buttons">
+        <div class="buttons-top">
+          <button
+            class="player-choice-btn rock"
+            onclick="setPlayerRock()"
+          ></button>
+        </div>
+        <div class="buttons-botom">
+          <button
+            class="player-choice-btn paper"
+            onclick="setPlayerPaper()"
+          ></button>
+          <button
+            class="player-choice-btn scissors"
+            onclick="setPlayerScissors()"
+          ></button>
+        </div>
       </div>
 
       <div class="log">
@@ -31,8 +33,13 @@
         <h3 class="who-win">Please play your hand above</h3>
       </div>
       <div class="retry-game">
-        <h2 class="retry-message"></h2>
-        <div class="play-again">Play Again</div>
+        <h2 class="retry-message">hey do you want to play again</h2>
+        <button
+          class="play-again play-again-btn onclick"
+          onclick="refreshPage()"
+        >
+          Play Again
+        </button>
       </div>
       <div class="rounds-and-scores">
         <div class="which-round"><h3 class="round">Round One</h3></div>
